@@ -1,0 +1,9 @@
+<footer class="d-flex align-items-center">
+    <div class="container-md d-flex justify-content-between">
+        {% if DISPLAY_PAGES_ON_MENU %}
+        {% for p in pages %}
+        <a href="{{ SITEURL }}/{{ p.url }}" class="footerBtn">{{ p.title }}</a>
+        {% endfor %}
+        {% endif %}
+    </div>
+</footer>
