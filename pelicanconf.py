@@ -15,12 +15,7 @@ TIMEZONE = "Europe/Rome"
 
 DEFAULT_LANG = "English"
 
-# THEME = "minimal-xy"
 THEME = "softyTechTheme"
-
-# Theme customizations
-MINIMALXY_START_YEAR = 2023
-MINIMALXY_CURRENT_YEAR = date.today().year
 
 DISQUS_SITENAME = "softytech"
 
