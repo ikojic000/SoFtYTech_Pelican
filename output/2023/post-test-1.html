@@ -11,7 +11,7 @@
     <meta name="author" content="Ivan Kojic">
     <link rel="icon" href="/theme/css/images/SoFtYTechIcon.ico" type="image/x-icon" />
 
-    <title>SoftyTech - Test Title 1</title>
+    <title>SoftyTech</title>
 
     <!-- Bootstrap Grid CSS -->
     <link rel="stylesheet" type="text/css" href="/theme/css/bootstrap/bootstrap-grid.css">
@@ -34,7 +34,6 @@
     <link rel="stylesheet" type="text/css" href="/theme/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/theme/css/alert-comment-scrollbar.css">
     <link rel="stylesheet" type="text/css" href="/theme/css/form.css">
-    <link rel="stylesheet" type="text/css" href="/theme/css/w3.css">
 
 </head>
 
@@ -63,34 +62,37 @@
     <main>
         <div class="wrapper container">
 
-<section id="content" class="body">
-  <header>
-    <h2 class="entry-title">
-      <a href="/2023/post-test-1.html" rel="bookmark"
-         title="Permalink to Test Title 1">Test Title 1</a></h2>
- 
-  </header>
-  <footer class="post-info">
-    <time class="published" datetime="2023-08-30T10:20:00+02:00">
-      Wed 30 August 2023
-    </time>
-    <address class="vcard author">
-      By           <a class="url fn" href="/author/ivan-kojic.html">Ivan Kojic</a>
-    </address>
-    <div class="category">
-        Category: <a href="/category/news.html">News</a>
+
+<div class="post-main">
+    <div class="post-head-image-container">
+        <img src="/images/default.jpg" alt="">
+        <h1 class="post-title">
+            <div class="post-title-span">Test Title 1</div>
+        </h1>
     </div>
-  </footer><!-- /.post-info -->
-  <div class="entry-content">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-  </div><!-- /.entry-content -->
-</section>
+    <div class="post-content">
+        <div class="test-background"></div>
+        <div class="row mb-2">
+            <h3 class="post-subtitle"></h3>
+        </div>
+        <span class="line"></span>
+        <div class="row d-flex d-flex justify-content-between mb-5">
+            <div class="col post-date">Wed 30 August 2023</div>
+            <div class="col post-author">Written by: Ivan Kojic</div>
+        </div>
+        <p><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></p>
+    </div>
+</div>
+
+<button id="topBtn"><i class="fa-solid fa-angles-up"></i></button>
         </div>
     </main>
 
 <footer class="d-flex align-items-center">
     <div class="container-md d-flex justify-content-between">
         <a href="/pages/about.html" class="footerBtn">About</a>
+        <a href="/pages/cmpdtech.html" class="footerBtn">&copyMPDTech</a>
+        <a href="/pages/contact.html" class="footerBtn">Contact</a>
     </div>
 </footer>
     <!--- SCRIPTS --->
@@ -113,6 +115,45 @@
     <script src="https://kit.fontawesome.com/c684ba2383.js" crossorigin="anonymous"></script>
 
 
+
+<script>
+
+    // Define variables for jQuery, window, and document
+    var $, window, document;
+
+    /* TopButton_function */
+    $(document).ready(function () {
+        "use strict";
+        // Initially, hide the element with ID 'topBtn'
+        $("#topBtn").css("visibility", "hidden");
+
+        // When the user scrolls the page
+        $(window).scroll(function () {
+            var scrollval = $(window).scrollTop();
+
+            // If the scroll position is greater than 80 pixels from the top
+            if (scrollval > 80) {
+                // Make the element with ID 'topBtn' visible
+                $("#topBtn").css("visibility", "visible");
+            } else {
+                // Otherwise, hide the element with ID 'topBtn'
+                $("#topBtn").css("visibility", "hidden");
+            }
+        });
+
+        // When the element with ID 'topBtn' is clicked
+        $("#topBtn").click(function () {
+            // Scroll smoothly to the top of the page
+            $("html ,body").animate(
+                {
+                    scrollTop: 0,
+                },
+                500
+            );
+        });
+    });
+
+</script>
 
 </body>
 

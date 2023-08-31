@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block customCSS %}
+<link rel="stylesheet" type="text/css" href="{{ SITEURL }}/theme/css/pageStyle.css">
+{% endblock customCSS %}
+
+{% block content %}
+<div class="main-content">
+    {% if page.title == "Contact" %}
+    <form action="https://formkeep.com/f/7533dfcdb21d" accept-charset="UTF-8" enctype="multipart/form-data"
+        method="POST">
+        <p>Feel free to contact us..</p>
+
+        <input class="form-input " id="name" name="name" placeholder="Enter your name..." required="" type="text"
+            value="">
+
+        <input class="form-input" id="email" name="email" placeholder="Enter your email..." required="" type="text"
+            value="">
+
+        <input class="form-input" id="subject" name="subject" placeholder="Enter message subject..." required=""
+            type="text" value="">
+
+        <textarea class="form-input form-textarea" id="message" name="message" placeholder="Type your message..."
+            required=""></textarea>
+
+        <input class="form-submit-button" id="submit" name="submit" type="submit" value="Send">
+    </form>
+    {% else %}
+    {{ page.content }}
+    {% endif %}
+
+</div>
+{% endblock content %}
