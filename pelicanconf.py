@@ -22,6 +22,7 @@ THEME = "softyTechTheme"
 MINIMALXY_START_YEAR = 2023
 MINIMALXY_CURRENT_YEAR = date.today().year
 
+DISQUS_SITENAME = "softytech"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
